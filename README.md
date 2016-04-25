@@ -241,3 +241,4 @@ io.of('/namespace').use(function(socket, next) {
 - [Redis + Node.js + Socket.IO – Event-driven, subscription-based broadcasting](https://codesachin.wordpress.com/2015/06/27/redis-node-js-socket-io-event-driven-subscription-based-broadcasting/)
 - [Chat based on Node.js using Redis Pub/Sub + socket.io](https://github.com/steffenwt/nodejs-pub-sub-chat-demo)
 - [Scaling real-time apps (using Redis)](https://github.com/rajaraodv/redispubsub)
+- [Redis Publish-Subscribe](https://blogs.msdn.microsoft.com/cdndevs/2015/06/15/learning-redis-part-6-redis-publish-subscribe/)

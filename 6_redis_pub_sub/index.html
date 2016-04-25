@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<ul id="chat-container">
+		<li class="chat-title">Chat Title</li>
+	</ul>
+	<input id="chat-input" placeholder="Type a message here..."/>
+	<button id="chat-button" type="button">Send</button>
+
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+		var chatContainer = $('#chat-container');
+		var inputMessage = $('#chat-input');
+		var chatButton = $('#chat-button');
+
+		var chat = io.connect('http://localhost:8000/chat');
+
+		chat.on('connect', function() {
+			chat.emit('hi!');
+		});
+
+		chat.on('chat', function(data) {
+			var message = $('<li class="chat-message">').text(data.msg);
+			chatContainer.append(message);
+		});
+
+		chatButton.click(function() {
+			var message = inputMessage.val();
+			chat.emit('new message', { msg: message });
+		});
+	</script>
+</body>
+</html>
