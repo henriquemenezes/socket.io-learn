@@ -240,3 +240,4 @@ io.of('/namespace').use(function(socket, next) {
 - [Better authentication for socket.io ](https://facundoolano.wordpress.com/2014/10/11/better-authentication-for-socket-io-no-query-strings/)
 - [Redis + Node.js + Socket.IO – Event-driven, subscription-based broadcasting](https://codesachin.wordpress.com/2015/06/27/redis-node-js-socket-io-event-driven-subscription-based-broadcasting/)
 - [Chat based on Node.js using Redis Pub/Sub + socket.io](https://github.com/steffenwt/nodejs-pub-sub-chat-demo)
+- [Scaling real-time apps (using Redis)](https://github.com/rajaraodv/redispubsub)
